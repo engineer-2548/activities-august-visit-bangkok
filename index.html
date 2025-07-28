@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 ปฏิทินกิจกรรม เดือนสิงหาคม 2568 - Visit Bangkok</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;700&display=swap');
+        
+        * {
+            font-family: 'Noto Sans Thai', sans-serif;
+        }
+        
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --dark-gradient: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+        }
+        
+        body {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .dark {
+            background-color: #0f0f0f;
+            color: #f0f0f0;
+        }
+        
+        .gradient-text {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .dark .glass-morphism {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .slide-in {
+            animation: slideIn 0.8s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .5; }
+        }
+        
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .bg-animated {
+            background: linear-gradient(270deg, #667eea, #764ba2, #f093fb, #f5576c);
+            background-size: 800% 800%;
+            animation: gradientShift 15s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: white;
+            border-radius: 50%;
+            animation: sparkle 3s linear infinite;
+        }
+        
+        @keyframes sparkle {
+            0% {
+                opacity: 0;
+                transform: translateY(0) scale(0);
+            }
+            10% {
+                opacity: 1;
+                transform: translateY(-10px) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-60px) scale(0);
+            }
+        }
+        
+        .event-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .event-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: var(--primary-gradient);
+            border-radius: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+        
+        .event-card:hover::before {
+            opacity: 1;
+        }
+        
+        .ribbon {
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            font-weight: bold;
+            font-size: 12px;
+        }
+        
+        #particles-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-50 to-pink-50 min-h-screen">
+    <div id="particles-bg"></div>
+    
+    <div class="content-wrapper">
+        <!-- Toggle Dark Mode Button -->
+        <button id="darkModeToggle" class="fixed top-5 right-5 z-50 bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg hover-lift">
+            <i class="fas fa-moon text-purple-600 dark:text-yellow-400"></i>
+        </button>
+        
+        <!-- Hero Section -->
+        <header class="bg-animated text-white py-20 px-4 relative overflow-hidden">
+            <div class="container mx-auto relative z-10">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 float-animation">
+                        🎉 ปฏิทินกิจกรรม
+                    </h1>
+                    <h2 class="text-2xl md:text-4xl mb-2">เดือนสิงหาคม 2568</h2>
+                    <p class="text-lg md:text-xl opacity-90">มาแล้ววววว!</p>
+                </div>
+            </div>
+            
+            <!-- Sparkle Effects -->
+            <div class="sparkle" style="left: 10%; animation-delay: 0s;"></div>
+            <div class="sparkle" style="left: 30%; animation-delay: 1s;"></div>
+            <div class="sparkle" style="left: 50%; animation-delay: 2s;"></div>
+            <div class="sparkle" style="left: 70%; animation-delay: 0.5s;"></div>
+            <div class="sparkle" style="left: 90%; animation-delay: 1.5s;"></div>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 py-12">
+            <!-- Intro Section -->
+            <div class="glass-morphism p-8 mb-12 slide-in">
+                <h3 class="text-2xl font-bold gradient-text mb-4 text-center">
+                    เรารวมมาให้แล้วค่ะ มีกิจกรรมหลากหลาย ตอบโจทย์ทุกไลฟ์สไตล์
+                </h3>
+                
+                <!-- Hero Image -->
+                <div class="mb-8 rounded-xl overflow-hidden shadow-2xl hover-lift">
+                    <img src="https://lh5.googleusercontent.com/d/1BSMWT5BnDXx3USdwuTnc-uiwri358hIr" 
+                         alt="กิจกรรมสิงหาคม 2568" 
+                         class="w-full h-auto object-cover">
+                </div>
+            </div>
+            
+            <!-- Events Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <!-- Event Card 1 -->
+                <div class="event-card glass-morphism p-6 hover-lift">
+                    <div class="ribbon">HOT!</div>
+                    <div class="text-5xl mb-4 text-center">🛍️</div>
+                    <h4 class="text-xl font-bold mb-2 dark:text-white">งานแสดงสินค้า</h4>
+                    <p class="text-gray-700 dark:text-gray-300">ให้สายชอปเลือกเดินกันอย่างจุใจ พบกับสินค้าหลากหลายในราคาพิเศษ</p>
+                </div>
+                
+                <!-- Event Card 2 -->
+                <div class="event-card glass-morphism p-6 hover-lift">
+                    <div class="text-5xl mb-4 text-center">🎨</div>
+                    <h4 class="text-xl font-bold mb-2 dark:text-white">กิจกรรมในย่านสร้างสรรค์</h4>
+                    <p class="text-gray-700 dark:text-gray-300">พบกับศิลปะและความสร้างสรรค์จากศิลปินรุ่นใหม่</p>
+                </div>
+                
+                <!-- Event Card 3 -->
+                <div class="event-card glass-morphism p-6 hover-lift">
+                    <div class="text-5xl mb-4 text-center">🚤</div>
+                    <h4 class="text-xl font-bold mb-2 dark:text-white">งานตลาดน้ำ</h4>
+                    <p class="text-gray-700 dark:text-gray-300">ตลาดน้ำและถนนคนเดินกระตุ้นเศรษฐกิจ อาหารอร่อย ของดี</p>
+                </div>
+                
+                <!-- Event Card 4 -->
+                <div class="event-card glass-morphism p-6 hover-lift">
+                    <div class="ribbon">NEW!</div>
+                    <div class="text-5xl mb-4 text-center">📚</div>
+                    <h4 class="text-xl font-bold mb-2 dark:text-white">งานหนังสือวาย</h4>
+                    <p class="text-gray-700 dark:text-gray-300">สาววายห้ามพลาด! พบกับนิยายและผลงานจากนักเขียนชื่อดัง</p>
+                </div>
+                
+                <!-- Event Card 5 -->
+                <div class="event-card glass-morphism p-6 hover-lift lg:col-span-2">
+                    <div class="ribbon">ครั้งแรก!</div>
+                    <div class="text-5xl mb-4 text-center">✨</div>
+                    <h4 class="text-xl font-bold mb-2 dark:text-white">เทศกาลแสดงไฟและศิลปะดิจิทัล</h4>
+                    <p class="text-gray-700 dark:text-gray-300">ครั้งแรกในย่านทรงวาด! ตื่นตาตื่นใจกับแสงไฟและศิลปะดิจิทัลสุดอลังการ</p>
+                </div>
+            </div>
+            
+            <!-- CTA Section -->
+            <div class="text-center glass-morphism p-8 pulse-animation">
+                <h3 class="text-2xl font-bold mb-4 gradient-text">และงานที่น่าสนใจอีกมากมาย เช็คเลย!!</h3>
+                <a href="https://www.facebook.com/share/1AB1exZW5r/" 
+                   target="_blank"
+                   class="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-lg">
+                    <i class="fab fa-facebook mr-2"></i>
+                    ดูรายละเอียดเพิ่มเติม
+                </a>
+            </div>
+            
+            <!-- Tags -->
+            <div class="mt-12 text-center">
+                <div class="flex flex-wrap justify-center gap-2">
+                    <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-4 py-2 rounded-full text-sm">#ท่องเที่ยวกรุงเทพมหานคร</span>
+                    <span class="bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200 px-4 py-2 rounded-full text-sm">#ปฏิทินท่องเที่ยว</span>
+                    <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm">#ปฏิทินกิจกรรม</span>
+                    <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-4 py-2 rounded-full text-sm">#กรุงเทพมหานคร</span>
+                    <span class="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-4 py-2 rounded-full text-sm">#VisitBangkok</span>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="bg-gray-100 dark:bg-gray-900 py-8 mt-16">
+            <div class="container mx-auto px-4 text-center">
+                <p class="text-gray-600 dark:text-gray-400">
+                    © 2568 Visit Bangkok - ท่องเที่ยวกรุงเทพมหานคร
+                </p>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const icon = darkModeToggle.querySelector('i');
+        
+        // Check for saved preference or default to light mode
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+        
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark');
+            const isDark = body.classList.contains('dark');
+            
+            if (isDark) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+            
+            localStorage.setItem('darkMode', isDark);
+        });
+        
+        // Particle Background
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'sparkle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 3 + 's';
+            particle.style.animationDuration = (3 + Math.random() * 2) + 's';
+            document.getElementById('particles-bg').appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 5000);
+        }
+        
+        // Create particles periodically
+        setInterval(createParticle, 300);
+        
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all event cards
+        document.querySelectorAll('.event-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease-out';
+            observer.observe(card);
+        });
+        
+        // Add ripple effect on click
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('a, button')) return;
+            
+            const ripple = document.createElement('div');
+            ripple.className = 'absolute pointer-events-none';
+            ripple.style.left = e.clientX + 'px';
+            ripple.style.top = e.clientY + 'px';
+            ripple.innerHTML = '<div class="w-10 h-10 bg-purple-400 rounded-full opacity-30 animate-ping"></div>';
+            document.body.appendChild(ripple);
+            
+            setTimeout(() => ripple.remove(), 1000);
+        });
+        
+        // Mobile menu smooth scroll
+        if ('ontouchstart' in window) {
+            document.body.style.cursor = 'pointer';
+        }
+    </script>
+</body>
+</html>
